@@ -13,10 +13,14 @@ async function scrape() {
 
     const tableSection = jsdom.window.document.querySelector(".wikitable")
     //ul list in the div 
-    const tables = tableSection.querySelectorAll("tr");
+    const tables = tableSection.querySelectorAll("tbody");
     console.log(tables)
     //console.log(tables.length)
      const opponents = []
+
+     console.log(tables.length)
+
+
 
     //console.log(tables.values())
     // for (let i =0; i<tables.length;i++){
@@ -24,16 +28,21 @@ async function scrape() {
     //   console.log(item)
     // }
 
-    const table = tables.values()
+     const rows = tables.values()
+     console.log(rows)
+     for (data in tables){
+      console.log(data)
+     }
 
-    //this returns undefined 
-    console.log(table[10])
-    for (var value of tables.values()){
 
-      opponents.push(value)
-      console.log(value)
-    }
-    console.log(opponents)
+    // //this returns undefined 
+    // console.log(table[10])
+    // for (var value of tables.values()){
+
+    //   opponents.push(value)
+    //   console.log(value)
+    // }
+    // console.log(opponents)
 
 
     // for (index =0; index<tables.length; index++){
