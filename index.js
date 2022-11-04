@@ -6,25 +6,43 @@ async function scrape() {
     const html = page.data
     const jsdom = new JSDOM(html);
 
+
      ///tbody>tr>td>select world champions
+
+     //DOM structure 
 
     const tableSection = jsdom.window.document.querySelector(".wikitable")
     //ul list in the div 
-    const table = tableSection.querySelectorAll("tbody");
-    //const rows = tableSection.querySelectorAll('tr')
-    //console.log(rows)
-    //console.log(table.length)
-    const opponents = []
+    const tables = tableSection.querySelectorAll("tr");
+    console.log(tables)
+    //console.log(tables.length)
+     const opponents = []
 
-          for (rows of table){
-            console.log(rows)
-            const tableItems = rows.querySelectorAll('tr')
-             console.log(tableItems)
-            for (data of tableItems){
-                const name = tableItems.querySelector("td")
-                console.log(name)
-            }
-          }
+    //console.log(tables.values())
+    // for (let i =0; i<tables.length;i++){
+    //   let item = tables[i]
+    //   console.log(item)
+    // }
+
+    const table = tables.values()
+
+    //this returns undefined 
+    console.log(table[10])
+    for (var value of tables.values()){
+
+      opponents.push(value)
+      console.log(value)
+    }
+    console.log(opponents)
+
+
+    // for (index =0; index<tables.length; index++){
+    //   const table = tables[index]; 
+    //   const tableItems = table.querySelectorAll('td')
+    //   console.log(tableItems)
+    // }
+  
+
     
 
    

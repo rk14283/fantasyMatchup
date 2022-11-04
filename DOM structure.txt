@@ -1,0 +1,18 @@
+table
+    thead
+        <tr><tr>
+        <th><th>
+    </tr>
+
+    <tbody>
+    <tr>
+    <td>January<td>
+    <td>January<td>
+    </tr>
+    <tr>
+    <td><td>
+    <td><td>
+    </tr>
+    </tbody>
+    </table>
+
